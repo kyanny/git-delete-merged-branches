@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#
+# Setup:
+#   $ install -d $HOME/bin && install git-delete-merged-branches $HOME/bin
+#   $ export PATH=$HOME/bin:$PATH
+#
+# Git Alias:
+#   $ git config --global --add alias.fp '!git fetch -p && git-delete-merged-branches'
+#   $ git config --global --add alias.pp '!git pull -p && git-delete-merged-branches'
+
+git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d %
