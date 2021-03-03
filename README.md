@@ -8,6 +8,7 @@ Git utility script to delete merged local branches.
 curl -O https://raw.githubusercontent.com/kyanny/git-delete-merged-branches/master/git-delete-merged-branches
 chmod +x git-delete-merged-branches
 install git-delete-merged-branches /usr/local/bin
+rm git-delete-merged-branches
 ```
 
 # Git aliases
