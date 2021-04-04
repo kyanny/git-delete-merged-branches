@@ -7,4 +7,4 @@
 #   $ git config --global --add alias.fp '!git fetch -p && git-delete-merged-branches'
 #   $ git config --global --add alias.pp '!git pull -p && git-delete-merged-branches'
 
-git branch --merged | grep -vE '^\*|main$|master$|develop$' | xargs -I % git branch -d %
+git branch --merged | grep -vE '((^\*)|^ *(main|master|develop)$)' | xargs -I % git branch -d %
